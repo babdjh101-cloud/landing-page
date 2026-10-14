@@ -1,0 +1,19 @@
+name = "indigo-denim-store"
+pages_build_output_dir = "dist"
+compatibility_date = "2024-09-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Cloudflare D1 Database Binding
+# Replace `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx` with your actual D1 database ID created via:
+# npx wrangler d1 create denim-store-db
+[[d1_databases]]
+binding = "DB"
+database_name = "denim-store-db"
+database_id = "99567ce9-f7e1-49d7-8596-1afcf7543591"
+
+[vars]
+ENVIRONMENT = "production"
+GTM_CONTAINER_ID = "GTM-XXXXXXX"
+GTM_ENABLED = "false"
+ADMIN_BOOTSTRAP_USER = "admin"
+# Set ADMIN_BOOTSTRAP_PASSWORD securely in Cloudflare Pages dashboard secrets
